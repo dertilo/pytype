@@ -1,0 +1,5 @@
+from typing import TypeVar, Callable, Any
+
+_FuncT = TypeVar('_FuncT', bound=Callable[..., Any])
+
+def beartype(funcobj: _FuncT) -> _FuncT: ...
